@@ -1,0 +1,12 @@
+<ActionBar class="action-bar">
+    <Label class="action-bar-title" text="Test"></Label>
+</ActionBar>
+<GridLayout id="grid" class="page" rows="*,500">
+    <Button id="button" row="0" [nsRouterLink]="['/home']" clearHistory="false"
+        text="Navigate to Home Component"></Button>
+    <RadListView id="listView" row="1" [items]="items" height="500">
+        <ng-template tkListItemTemplate let-item="item">
+            <Label [text]="'item ' + item"></Label>
+        </ng-template>
+    </RadListView>
+</GridLayout>

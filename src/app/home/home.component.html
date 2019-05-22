@@ -1,0 +1,9 @@
+<ActionBar class="action-bar">
+    <Label class="action-bar-title" text="Home"></Label>
+</ActionBar>
+
+<StackLayout class="page">
+    <Button [nsRouterLink]="['/test']" clearHistory="false" text="Navigate to Test Component"></Button>
+    <Button [nsRouterLink]="['/test']" clearHistory="true" text="Navigate to Test Component and clear history"></Button>
+    <Button text="Collect garbage" (tap)="collectGarbage()"></Button>
+</StackLayout>
