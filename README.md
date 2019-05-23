@@ -22,7 +22,7 @@ If you replace *RadListView* with *ListView* in *test.component.html* the descri
 * When you do steps 10 und 11 the gargabe collector works as expected
 
 
-The problem also exists on Android. I tested the above Android in Android Studio and the result is similar.
+The problem also exists on Android. I tested the above in Android Studio and the result is similar.
 
 
 
