@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { RouterExtensions } from "nativescript-angular/router";
+import { isIOS } from "tns-core-modules/platform";
+import { GC } from "tns-core-modules/utils/utils";
 
 @Component({
     selector: "Home",
@@ -17,6 +19,9 @@ export class HomeComponent implements OnInit {
     }
 
     collectGarbage(): void {
-        (<any>global).__collect();
+        if (isIOS)
+            (<any>global).__collect();
+        else
+            GC();
     }
 }

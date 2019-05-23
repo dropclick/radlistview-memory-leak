@@ -1,5 +1,8 @@
 # radlistview-memory-leak
-Native Script demo app to illustrate memory leak of RadListView component.
+
+##Native Script demo app to illustrate memory leak of RadListView component
+
+Problem description: Heap memory allocated by RadListView instances is never fully released during garbage collection.
 
 Steps to reproduce iOS memory leak:
 1. Run *tns install*
@@ -16,7 +19,10 @@ Steps to reproduce iOS memory leak:
 
 If you replace *RadListView* with *ListView* in *test.component.html* the described behaviour changes as follows:
 * Heap allocations increase around 1 MB each you navigate from *Home* to *Test*
-* When you do steps 10 und 11 the gargabe collector works as expected 
+* When you do steps 10 und 11 the gargabe collector works as expected
+
+
+The problem also exists on Android. I tested the above Android in Android Studio and the result is similar.
 
 
 
