@@ -1,10 +1,10 @@
 # radlistview-memory-leak
 
-##Native Script demo app to illustrate memory leak of RadListView component
+**Native Script demo app to illustrate memory leak of RadListView component**
 
 Problem description: Heap memory allocated by RadListView instances is never fully released during garbage collection.
 
-Steps to reproduce iOS memory leak:
+Steps to reproduce memory leak on iOS:
 1. Run *tns install*
 2. Run *tns build ios --for-device --release*
 3. Open platforms/ios in XCode
