@@ -19,7 +19,7 @@ Steps to reproduce memory leak on iOS:
 
 If you replace *RadListView* with *ListView* in *test.component.html* the described behaviour changes as follows:
 * Heap allocations increase around 1 MB each you navigate from *Home* to *Test*
-* When you do steps 10 und 11 the gargabe collector works as expected
+* When you do steps 10 und 11 the garbage collector works as expected
 
 
 The problem also exists on Android. I tested the above in Android Studio and the result is similar.
