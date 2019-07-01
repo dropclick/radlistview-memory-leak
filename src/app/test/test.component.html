@@ -1,12 +1,16 @@
 <ActionBar class="action-bar">
-    <Label class="action-bar-title" text="Test"></Label>
+    <Label class="action-bar-title" text="Test 2"></Label>
 </ActionBar>
 <GridLayout id="grid" class="page" rows="*,500">
     <Button id="button" row="0" [nsRouterLink]="['/home']" clearHistory="false"
-        text="Navigate to Home Component"></Button>
-    <RadListView id="listView" row="1" [items]="items" height="500">
+        text="Navigate to Home Component"></Button>ç
+    <RadListView id="listView" row="1" [items]="items" height="500" swipeActions="true" (itemSwipeProgressStarted)="onSwipeCellStarted($event)">
         <ng-template tkListItemTemplate let-item="item">
             <Label [text]="'item ' + item"></Label>
         </ng-template>
+        <GridLayout columns="*, auto" *tkListItemSwipeTemplate>
+            <Button row="0" col="1" text="test" id="test" verticalAlignment="center"
+                (tap)="onTestButtonTap($event)"></Button>
+        </GridLayout>
     </RadListView>
 </GridLayout>
