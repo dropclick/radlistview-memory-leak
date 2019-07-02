@@ -22,7 +22,6 @@ export class TestComponent implements OnInit, OnDestroy {
             if (grid) {
                 let listView: ViewBase = grid.getViewById("listView");
                 listView.eachChild((child: ViewBase): boolean => {
-                    console.log(child);
                     child.disposeNativeView();
                     child.eachChild((grandchild: ViewBase): boolean => {
                         console.log(grandchild);
